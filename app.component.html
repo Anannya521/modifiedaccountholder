@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<hr/>
+<div class="abc">
+<div class="container">
+  <div class="panel panel-primary" >
+    
+  <div class="xyz">
+    <h2 style="text-align: center;background-color: rebeccapurple;color:blanchedalmond;">ACCOUNT HOLDER DETAILS</h2>
+    
+    <div class="panel-body">
+      <form [formGroup]="aform" (ngSubmit)="login()">
+  
+        <div class="form-group">
+          <label for="accname">Account Holder Name</label>
+          <input type="text" class="form-control" id="accname" formControlName="accname">
+          <small style="color:red" *ngIf="accname.invalid && accname.touched">*ACCOUNT HOLDER NAME IS REQUIRED</small>
+        </div>
+        <br>
+            
+        <div class="text-center">
+           <button class="btn btn-primary" [disabled]="aform.invalid">SUBMIT</button> </div>
+          
+          </form>
+   
+       </div>
+      <br/>
+       <div class="panel-footer">
+        <div class="alert alert-primary" role="alert">
+        </div>
+        </div>
+          </div> 
+        </div>  
+      </div>
+          <hr/>      
+
+<router-outlet></router-outlet>
